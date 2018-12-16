@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://senseable.mit.edu/roadahead/ -->
+<html class="gr__senseable_mit_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Assignment 4 Shuyang Huang</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+
+		<!-- jquery -->
+		<script type="text/javascript" src="./index_files/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="./index_files/menu.js"></script>
+
+        <script type="text/javascript" src="./index_files/lightbox.min.js"></script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+          <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+
+		<script type="text/javascript" src="./index_files/jquery.easing.1.3.js"></script>
+
+		<!-- link scroller -->
+		<script type="text/javascript" src="./index_files/jquery.scrollTo-1.4.3.1-min.js"></script>
+		<script src="./index_files/jquery.localscroll-1.2.7-min.js"></script>
+        <!-- better scroller -->
+		<script type="text/javascript" src="./index_files/smoothscroll.js"></script>
+        <!-- bootstrap js -->
+		<script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+
+		<!-- bootstrap magic -->
+		<link rel="stylesheet" type="text/css" href="./index_files/bootstrap.min.css">
+		<!-- theme custom -->
+		<link rel="stylesheet" href="./index_files/styles.css">
+		<link rel="stylesheet" href="./index_files/menu.css">
+        <link rel="stylesheet" href="./index_files/lightbox.css">
+
+		<!--Google Fonts-->
+		<link href="./index_files/css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">/**
+ * Style sheet used by new LibX tooltip code
+ */
+
+/* We insert a <div> with libx-tooltip style under the body.
+ * This will inherit body's style - we can't afford to inherit undesirable
+ * styles and we must redefine what we need.  OTOH, some things, e.g.
+ * font-size, might be ok to be inherited to stay within the page's tone.
+ */
+.libx-tooltip {
+    display: none;
+    overflow: visible;
+    padding: 5px;
+    z-index: 100;
+    background-color: #eee;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    border: 2px solid #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.libx-tooltip p {
+    /* override default 1em margin to keep paragraphs inside a tooltip closer together. */
+    margin: .2em;
+}
+</style><style type="text/css">/**
+ * Style sheet used by LibX autolinking code
+ */
+.libx-autolink {
+}
+
+</style></head>
+	<body data-gr-c-s-loaded="true" style="">
+
+
+
+<!--/////////////////-->
+<!-- HEADER SECTION -->
+<!--/////////////////-->
+
+
+
+
+<div class="header-wrap" id="top">
+	<div class="container head-container">
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6 text-center">
+				<div class="logo"><img src="./index_files/letter2.png"></div>
+			</div>
+		</div>
+		<div class="row title">
+		  <div class="col-md-offset-3 col-md-6 text-center">
+				<h1><br>A LETTER TO UBER DRIVERS</h1>
+				<h2> 15 November 2018 <br>
+                Shuyang Huang (sh3685)</h2>
+			  <h3>
+                Assignment 4 Visualization
+		          <br>
+		          WITH SUPPORT FROM Anthony Vanky
+		    </h3></div>
+		</div>
+
+
+
+    </div>
+</div>
+
+
+ <div id="menu" style="position: fixed; top: 0px;">
+	<div class="container">
+		<div class="row">
+				<div class="col-md-12 menu-container">
+					<a id="conference" onclick="scrollTo(&#39;conference&#39;)" style="border-bottom: none;">Intro</a>
+					     <a id="programme" onclick="scrollTo(&#39;programme&#39;)" style="border-bottom: none;">Time</a>
+
+                <a id="speakers" onclick="scrollTo(&#39;speakers&#39;)" style="border-bottom: none;">Time: graph</a>
+					<a id="registration" onclick="scrollTo(&#39;registration&#39;)" style="border-bottom: none;">location</a>
+					<a id="travel" onclick="scrollTo(&#39;travel&#39;)" style="border-bottom: 3px solid black;">Location: graph</a>
+					<a id="contact" onclick="scrollTo(&#39;contact&#39;)" style="border-bottom: none;">Conclusion</a>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<!--/////////////////-->
+<!-- THEME SECTION -->
+<!--/////////////////-->
+
+
+
+<div class="theme-wrap" id="conference-section">
+	<div class="container theme-container">
+		<div class="row">
+			<div class="col-md-12 heading">
+				<h2>HI UBER DRIVERS, </h2>
+				<p>When you are driving around NYC and finding passengers, it might be possible that you will not find a single rider during your trip, and just waste oil and money time after time. NOW this website will help you to find the best time and location to get your passenger as quickly as possible. <br><br><br>Analyzing 1028136 Uber trips in September, 2014, we clearly find that the Uber passengers have a use pattern with strong regularity and repetition.</p>
+				<p><meta charset="utf-8">
+				</p>
+				<br>
+
+</div>
+		</div>
+		<div class="row"></div>
+	</div>
+</div>
+
+<!--/////////////////-->
+<!-- PROGRAMME SECTION -->
+<!--/////////////////-->
+
+<div class="programme-wrap" id="programme-section">
+	<div class="container programme-container">
+		<div class="row">
+		  <div class="col-md-12 heading">
+			<h2>time</h2>
+		    <p><strong>The best time to drive the car</strong>Below, a line chart tracks the number of pickups of Uber occurring by hour over the course of the day. The two summits indicate the morning and evening rush hours (around 7 am and 6 pm). The number of ridership in evening rush hours is approximately twice the number of ridership in morning rush hour. This result is indicative to show the commuting trends. For instance, workers are more likely to take the subway or other transit to their work, but they may take an Uber which has more flexibility than public transit after a hard day at work.  </p>
+		  </div>
+		</div></div></div>
+
+<!--/////////////////-->
+<!-- SPEAKERS SECTION -->
+<!--/////////////////-->
+
+<div class="speakers-wrap" id="speakers-section">
+			<div class="col-md-12 heading">
+				<h2>Time: uber trips distribution </h2>
+				<p>The graph of urber trips by time in Sept, 2014.</p>
+			</div>
+
+
+<!--Bubbles for future speakers-->
+					<script src="d3plus.v2.js"></script>
+					<script>
+					//https://d3plus.org/examples/d3plus-plot/secondary-axis-only/
+					var data = [
+						{id: "hour", metric: "12 am", value: 23263},
+						{id: "hour", metric: "1 am", value: 15483},
+						{id: "hour", metric: "2 am", value: 10388},
+						{id: "hour", metric: "3 am", value: 10408},
+						{id: "hour", metric: "4 am", value: 12141},
+						{id: "hour", metric: "5 am", value: 19595},
+						{id: "hour", metric: "6 am", value: 32444},
+						{id: "hour", metric: "7 am", value: 42261},
+						{id: "hour", metric: "8 am", value: 43548},
+						{id: "hour", metric: "9 am", value: 37633},
+						{id: "hour", metric: "10 am", value: 36583},
+						{id: "hour", metric: "11 am", value: 37587},
+						{id: "hour", metric: "12 pm", value: 38035},
+						{id: "hour", metric: "1 pm", value: 43670},
+						{id: "hour", metric: "2 pm", value: 51087},
+						{id: "hour", metric: "3 pm", value: 59331},
+						{id: "hour", metric: "4 pm", value: 66375},
+						{id: "hour", metric: "5 pm", value: 71579},
+						{id: "hour", metric: "6 pm", value: 73261},
+						{id: "hour", metric: "7 pm", value: 67959},
+						{id: "hour", metric: "8 pm", value: 62345},
+						{id: "hour", metric: "9 pm", value: 58744},
+						{id: "hour", metric: "10 pm", value: 49996},
+						{id: "hour", metric: "11 pm", value: 35388}
+					];
+
+					new d3plus.LinePlot()
+						.data(data)
+						.groupBy("id")
+						.y("value")
+						.x("metric")
+						.annotations([
+						 {
+							 data: [
+								 {x: "6 pm", y: 73261},
+								 {x: "6 pm", y: 10000},
+							 ],
+							 shape: "Line",
+							 stroke: "#ddd",
+							 strokeDasharray: "10",
+							 strokeWidth: 2
+						 },
+							{
+								data: [
+									{x: "6 pm", y: 73261, width: 180, height: 50}
+								],
+								fill: "#ddd",
+								label: "Best time to drive Uber",
+								labelConfig: {
+									textAnchor: "middle",
+									verticalAlign: "middle"
+								},
+								shape: "Rect"
+							}
+					 ])
+						 .render()
+						;
+					</script>
+
+	  </div>
+
+
+
+<!--SPEAKERS END-->
+
+
+
+
+<!--/////////////////-->
+<!-- REGISTRATION SECTION -->
+<!--/////////////////-->
+
+<div class="registration-wrap" id="registration-section">
+		<div class="row">
+		  <div id="gallery" class="col-md-12 heading">
+				<h2>location</h2>
+			    <p>The Tree map below is an interactive graph. You can click on the rectangles to know the exact number of Uber trips in each borough in September, 2014. It demonstrates how the vast majority of Uber pickups (76%) took place within Manhattan. The other boroughs represent a very small fraction of Uber pickups. Only 15% of pickups occurred in Brooklyn, 8% in Queens, 1% in Bronx and less than 1% in Staten Island. Therefore, it would be more likely to find a passenger in Manhattan borough.</p>
+			  </div>
+			</div>
+	</div>
+</div>
+
+
+<!--/////////////////-->
+<!-- TRAVEL SECTION -->
+<!--/////////////////-->
+
+<div class="travel-wrap" id="travel-section">
+			<div class="col-md-12 heading">
+			  <h2>location: uber trips by boroughs</h2>
+				<h2>Please click!</h2>
+				<p> The graph of Uber trips by boroughs in Sept, 2014. </p></div>
+					<script>
+					//https://d3plus.org/examples/d3plus-hierarchy/mouse-events/
+					var data = [
+					  {id: "Bronx", value: 8639},
+					  {id: "Brooklyn", value: 146395},
+					  {id: "Manhattan", value: 760171},
+					  {id: "Queens", value: 83604},
+					  {id: "Staten Island", value: 295}
+					];
+
+					new d3plus.Treemap()
+					  .data(data)
+					  .groupBy("id")
+					  .on("click", function(d) {
+					    alert(d.id + " has been clicked! " + "Total number of Uber Trips in Sept.2014 is "+d.value);
+					  })
+					  .sum("value")
+					  .render();
+					</script>
+
+
+
+
+</div>
+
+
+<!--/////////////////-->
+<!-- CONTACT SECTION -->
+<!--/////////////////-->
+
+
+
+
+
+<div class="contact-wrap" id="contact-section">
+	<div class="container theme-container">
+		<div class="row">
+			<div class="col-md-12 heading">
+				<h2>To conclude... </h2>
+				<p> You will gain more profits in evening rush hours in Manhattan borough!</p>
+
+
+</div>
+		</div>
+		<div class="row"></div>
+	</div>
+</div>
+
+
+
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="http://senseable.mit.edu/roadahead/"><div class="lb-nav"><a class="lb-prev" href="http://senseable.mit.edu/roadahead/"></a><a class="lb-next" href="http://senseable.mit.edu/roadahead/"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><script type="text/javascript" async="" src="./index_files/1e6ab715a3a95d4603.js"></script><div class="basketapp-quicksavebutton" style="background:rgba(0,0,0,0.3) url(chrome-extension://eblfjognkmbgmhfnkekoibgmohnhcbel/images/sprites/basketapp_saver.png)"></div></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
